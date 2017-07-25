@@ -1,5 +1,8 @@
 
+//Pedir eleccion del usuario
 var userChoice = prompt("Do you choose rock, paper or scissors?");
+
+//Calcular eleccion del computador
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
 	computerChoice = "rock";
@@ -7,15 +10,22 @@ if (computerChoice < 0.34) {
 	computerChoice = "paper";
 } else {
 	computerChoice = "scissors";
-} console.log("Computer: " + computerChoice);
+} 
+console.log("Computer: " + computerChoice);
 
-compare(userChoice,computerChoice);
 
+//obtener el resultado del juego
+var resultado=compare(userChoice,computerChoice);
+
+alert("El ganador es "+resultado);
+
+//Funcion que valida la eleccion del usuario y el computador 
 function compare(choice1,choice2){
     
+    //Comparar que los resultado no sean iguales 
     if(choice1===choice2){
         return "The result is a tie!";   
-    }else if (choice1=="rock"){
+    }else if (choice1=="rock"){ //Validaciones en caso de que el usuario seleccione roca
         
         if(choice2==="scissors"){
             return "rock wins";   
@@ -23,7 +33,7 @@ function compare(choice1,choice2){
             return "paper wins";   
         }
             
-    }else if (choice1=="paper"){
+    }else if (choice1=="paper"){//Validaciones en caso de que el usuario seleccione papel
         
         if(choice2==="rock"){
             return "paper wins";   
@@ -31,7 +41,7 @@ function compare(choice1,choice2){
             return "scissors wins";   
         }
    
-    }else if(hoice1=="scissors"){
+    }else if(hoice1=="scissors"){//Validaciones en caso de que el usuario seleccione tijeras
         
         if(choice2==="rock"){
             return "rock wins";   
