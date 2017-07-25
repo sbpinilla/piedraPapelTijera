@@ -1,4 +1,30 @@
 
+var interval ;
+
+window.onload = function() {
+     
+    interval= setInterval(generarFiguraAleatoria, 400);
+
+};
+
+
+function generarFiguraAleatoria(){
+
+    var imgComputer = document.getElementById("imgComputer");
+
+    var computerChoice = Math.random();
+    
+        if (computerChoice < 0.34) {
+            imgComputer.src="img/piedra.jpg";
+        } else if(computerChoice <= 0.67) {
+            imgComputer.src="img/papel.jpg";
+        } else {
+             imgComputer.src="img/tijera.jpg";
+        } 
+           
+}
+
+
 //Pedir eleccion del usuario
 var userChoice = prompt("Do you choose rock, paper or scissors?");
 

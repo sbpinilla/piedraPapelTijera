@@ -1,0 +1,14 @@
+
+
+
+.contenFigure {
+
+	margin:20px;
+	cursor: pointer;
+}
+
+.contentGame:hover {
+	
+	border: 1px dashed #000;
+	
+}
