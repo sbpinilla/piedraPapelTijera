@@ -4,15 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Piedra, papel o tijera</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="app.js"></script>
+
 </head>
 <body>
 	<!-- Codigo del diseño edl juego -->
 	
-	<h1>Piedra, papel o tijeras</h1>
+	
 
 	<table  >
 		
+		<tr>
+			<td class="contenVs" colspan="3">
+				<h1>Piedra, papel o tijeras</h1>
+			</td>
+		</tr>
 
 		<tr>
 			<td></td>
@@ -22,21 +27,37 @@
 			<td></td>
 
 		<tr>
+			<tr>
+				<td></td>
+				<td class="contenVs"> VS</td>
+				<td></td>
+			</tr>
 
 		<tr>
 			<td class="contentGame">
-				<img class="contenFigure" id="imgPiedra" src="img/piedra.jpg">
+				<img class="contenFigure" onclick="play(1)" id="imgPiedra" src="img/piedra.jpg">
 			</td>
 			<td class="contentGame">
-				<img  class="contenFigure" id="imgPapel" src="img/papel.jpg">
+				<img  class="contenFigure" onclick="play(2)" id="imgPapel" src="img/papel.jpg">
 			</td>
 			<td class="contentGame">
-				<img  class="contenFigure" id="imgTijeras" src="img/tijera.jpg">
+				<img  class="contenFigure" onclick="play(3)" id="imgTijeras" src="img/tijera.jpg">
 			</td>
 		</tr>
+<tr>
+	<td colspan="3" class="contenVs">
+		<div id="result"></div>
+	</td>
+</tr>
+	<tr>
+		<td class="contenVs" colspan="3">
+			<button class="centerM" id="btnReset" onclick="reset()" >Jugar de nuevo</button>
+		</td>
+	</tr>
+
 	</table>
 
 
-
+	<script src="app.js"></script>
 </body>
 </html>

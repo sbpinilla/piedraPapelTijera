@@ -1,5 +1,8 @@
 
+.contenVs{
 
+	text-align: center;
+}
 
 .contenFigure {
 
@@ -11,4 +14,16 @@
 	
 	border: 1px dashed #000;
 	
+}
+.resultOn{
+
+	display: block;
+}
+.resultOff{
+	display: none;
+}
+
+.centerM{
+
+	margin: 0 auto;
 }
